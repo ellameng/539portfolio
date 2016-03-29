@@ -1,0 +1,40 @@
+
+#header_img{
+	display: inline-block;
+	width: 200px;
+	height: auto;
+	margin: 0 auto;
+	border-radius: 50%;
+
+
+}
+
+#header_name{
+	color:white;
+	display:inline-block;
+	width:200px;
+	margin:0 auto;
+	text-align: center;
+	margin-top: 60px;
+	margin-bottom: 40px;
+}
+
+
+
+
+html, body {
+	background-image: url("/static/img/headerbackground.jpg");
+	/*width:100%;
+	height:auto;*/
+	background-size: auto 100%;
+	background-size: cover;
+	/*min-height: 100vh;*/
+
+
+}
+
+
+
+
+
+
