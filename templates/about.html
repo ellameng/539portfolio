@@ -1,7 +1,13 @@
 {% extends "templates/base.html" %}
 {% block content %} 
 	<section>
-		<p>
-			This the home page for a sample portfolio.  It is unstyled, but that is okay.  Here is a link to my <a href = "http://collemc.people.si.umich.edu">UMSI webpage</a>.</p>
+		<div class="container">
+			<div class="row">
+				<img class="col-xs-12 col-md-4 headshot" src="../static/img/headshot.jpg">
+				<p class="col-xs-12 col-md-7 col-md-offset-1 introduction">As EHRs become more adoptable in the health care system, more attention is being paid to safety and privacy issues. However, FDA should not create new regulations and mandate EHR vendors to rectify their EHR system.
+				First, unlike other medical devices, such as x-ray machines, EHRs can be used in many ways- storage patients’ information, connected with other medical devices, transmit patients’ information in or across systems, support decision making, etc. The complex nature of EHR renders it difficult to be measured and regulated by a rigorous regulation1. For example, it is rather challenging to prove EHR’s compatibility and functionality with every potential medical device connected with EHR. Even if the vendors changed EHR system to comply with FDA regulations, it is not feasible to retest all the EHRs when a brand new high-tech medical device is invented.
+				</p>
+			</div>
+		</div>
 	</section>
 {%endblock%}

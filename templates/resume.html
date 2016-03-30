@@ -1,7 +1,11 @@
 {%extends "templates/base.html" %}
 {% block content %} 
-	<section>  
-		<p>This is my resume.</p>
-		<img src = "static/img/family.jpg" alt = "family camp"/>
+	<section id="resumesection"> 
+		<div class="container">
+			<div class="row"> 
+			<h2 class="col-xs-12 col-sm-10 col-sm-offset-1 section-title">Resume</h2>
+			<iframe src="../static/Resume_Ella_Meng_Umich_MHI.pdf" class="col-xs-12 col-sm-10 col-sm-offset-1" id="resume"></iframe>
+			</div>
+		</div>
 	</section>
 	{% endblock %}
