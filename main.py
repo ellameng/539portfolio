@@ -41,9 +41,9 @@ class ResumeHandler(webapp2.RequestHandler):
     	template = JINJA_ENVIRONMENT.get_template('templates/resume.html')
     	self.response.write(template.render())
 
-class EmailHandler(webapp2.RequestHandler):
+class MailHandler(webapp2.RequestHandler):
     def get(self):
-        template = JINJA_ENVIRONMENT.get_template('templates/email.html')
+        template = JINJA_ENVIRONMENT.get_template('templates/mail.html')
         self.response.write(template.render())    
 
 
@@ -52,5 +52,5 @@ app = webapp2.WSGIApplication([
     ('/about.html', AboutHandler),
     ('/gallery.html', GalleryHandler),
     ('/resume.html', ResumeHandler), 
-    ('/email.html', EmailHandler),        #put all the header on one header
+    ('/mail.html', MailHandler),        #put all the header on one header
 ], debug=True)

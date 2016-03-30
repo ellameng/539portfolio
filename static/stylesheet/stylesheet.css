@@ -1,40 +1,105 @@
 
-#header_img{
-	display: inline-block;
-	width: 200px;
-	height: auto;
-	margin: 0 auto;
-	border-radius: 50%;
 
-
+#hd-background{
+	width: 100%;
+	height: 270px;
+	background: url("../img/bg-header.jpg");
+	position: absolute;
 }
 
-#header_name{
-	color:white;
-	display:inline-block;
-	width:200px;
-	margin:0 auto;
-	text-align: center;
-	margin-top: 60px;
-	margin-bottom: 40px;
-}
-
-
-
-
-html, body {
-	background-image: url("/static/img/headerbackground.jpg");
-	/*width:100%;
-	height:auto;*/
-	background-size: auto 100%;
+header{
+	/*background-image: url("../img/bg-header.jpg");*/
 	background-size: cover;
-	/*min-height: 100vh;*/
-
+	height: 270px;
 
 }
 
+header img{
+	width: 100%;
+	height: auto;
+	margin-top: 5%;
+}
 
+header nav{
+	margin-top: 10%;
+}
 
+header a{
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-size: 28px;
+	font-weight: 100;
+	display: inline-block;
+	margin-left: 10px;
+	margin-right: 10px;
+	color: #4e4e4e;
+	letter-spacing: 2px;
+	text-decoration: none;
+}
 
+header a:hover {
+	color: #fefefe;
+	text-decoration: none;
+}
 
+footer{
+	height: 80px;
+	width: 100%;
+	background-image: url("../img/bg-header.jpg");
+}
 
+.bottomsection{
+	height: 80px;
+}
+
+footer p{
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-size: 16px;
+	font-weight: 200;
+	display: inline-block;
+	color: #4e4e4e;
+	letter-spacing: 1px;
+	margin-top: 28px;
+}
+
+footer img{
+	display: inline-block;
+	height: 30px;
+	width: 30px;
+	margin-left: 6px;
+	margin-right: 6px;
+	margin-top: 24px;
+}
+
+section{
+	width: 100%;
+	height: auto;
+	background-image: url("../img/background.jpg");
+	background-size: cover;
+	margin: 0;
+	margin-bottom: -20px;
+	padding: 0;
+}
+
+.gallery{
+	padding-top:60px;
+	padding-bottom: 60px;
+}
+
+.gallery img{
+	height: auto;
+	display: block;
+	margin: 0 auto;
+	margin-top: 16px;
+	margin-bottom: 16px;
+}
+
+.section-title {
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-size: 32px;
+	font-weight: 100;
+	display: inline-block;
+	color: #fefefe;
+	letter-spacing: 2px;
+	margin-bottom: 30px;
+	margin-top:20px;
+}

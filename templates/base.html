@@ -9,28 +9,37 @@
    <script src="http://apps.bdimg.com/libs/bootstrap/3.3.0/js/bootstrap.min.js"></script>
 </head>
 <body>
-	
-		<div class="se-pre-con"></div>
-		<div class="container">
-			<div class="row">
-				<img id="header_img" src="../static/img/yuanxiaowithme.jpg" class="col-xs-4 col-xs-offset-4 header">
-				<h1 id="header_name">Ella Meng</h1>
-				<nav>
-					<a href = "about.html">ABOUT</a>
-					<a href = "gallery.html">GALLERY</a>
-					<a href = "resume.html">RESUME</a>
-					<a href = "email.html">EMAIL ME</a>
-				</nav>
-			</div>
+	<div id="hd-background"></div>
+	<header class="container">
+		<div class="row">
+			<img class="col-xs-4 col-xs-offset-4 col-md-3 col-md-offset-0" src="../static/img/hd-logo.jpg">
+			<nav class="hidden-xs visible-md col-md-6 col-md-offset-3 visible-lg col-lg-6">
+				<a href = "about.html">ABOUT</a>
+				<a href = "gallery.html">GALLERY</a>
+				<a href = "resume.html">RESUME</a>
+				<a href = "mail.html">MAIL ME</a>
+			</nav>
 		</div>
-		</div>
-	
+	</header>
+
 	{% block content %}
 	
 	{% endblock %}
+	<!-- <footer> Copyright &copy; Ella Meng.</footer> -->
+	
 	<footer>
-		<p>Copyright &copy; Ella Meng.</p>
+		<div class="container bottomsection">
+			<div class="row">
+				<p class="col-xs-12 col-md-6">Copyright &copy; Ella Meng.</p>
+				<div class="col-xs-12 col-md-3 col-md-offset-3 col-lg-2 col-lg-offset-4">
+					<img src="../static/img/facebook.png">
+					<img src="../static/img/linkedin.png">
+					<img src="../static/img/googleplus.png">
+				</div>
+			</div>
+		</div>
 	</footer>
+	
 	
 </body>
 </html>
