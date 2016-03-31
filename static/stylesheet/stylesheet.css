@@ -92,12 +92,17 @@ section{
 
 }
 
-#pic1 {
-	display: block;
+.introlink {
+	text-decoration: none;
+	font-weight: 200;
 }
-#pic2 {
-	display: block;
-}
+
+.introlink:hover { 
+color:#e6e600; 
+text-decoration:underline; 
+} 
+
+
 .gallery img{
 	height: auto;
 	display: block;
