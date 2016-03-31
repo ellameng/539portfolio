@@ -82,6 +82,22 @@ section{
 	padding-bottom: 60px;
 }
 
+.galleryintro {
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-size: 20px;
+	font-weight: 100;
+	display: block;
+	color: #fefefe;
+	letter-spacing: 1px;
+
+}
+
+#pic1 {
+	display: block;
+}
+#pic2 {
+	display: block;
+}
 .gallery img{
 	height: auto;
 	display: block;
