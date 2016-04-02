@@ -104,11 +104,32 @@ text-decoration:underline;
 
 
 .gallery img{
+	width: 100%;
 	height: auto;
 	display: block;
 	margin: 0 auto;
 	margin-top: 16px;
 	margin-bottom: 16px;
+}
+
+.img_text{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top:0;
+	left:0;
+	display: none;
+}
+
+.img_text div{
+	width: 100%;
+	text-align: center;
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-size: 32px;
+	font-weight: 200;
+	display: inline-block;
+	color: #fefefe;
+	letter-spacing: 2px;
 }
 
 .section-title {
@@ -152,8 +173,10 @@ text-decoration:underline;
 }
 
 #video{
+	margin: 0 auto;
 	margin-top:30px;
 	margin-bottom: 20px;
+	display: block;
 }
 
 

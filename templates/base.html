@@ -21,12 +21,12 @@
 				  Your browser does not support the audio element.
 				</audio>
 			</div>
-			<img class="col-xs-6 col-xs-offset-3 col-sm-4 col-sm-offset-4 col-md-3 col-md-offset-0" src="../static/img/hd-logo.jpg">
+			<img class="col-xs-6 col-xs-offset-3 col-sm-4 col-sm-offset-4 col-md-3 col-md-offset-0" src="../static/img/hd-logo.jpg" alt="namelogo">
 			<nav class="hidden-xs visible-md col-md-8 pull-right text-right visible-lg col-lg-6">
-				<a href = "about.html">ABOUT</a>
-				<a href = "gallery.html">GALLERY</a>
-				<a href = "resume.html">RESUME</a>
-				<a href = "mail.html">MAIL ME</a>
+				<a href = "about.html" id="nav_about">ABOUT</a>
+				<a href = "gallery.html" id="nav_gallery">GALLERY</a>
+				<a href = "resume.html" id="nav_resume">RESUME</a>
+				<a href = "mail.html" id="nav_mail">MAIL ME</a>
 			</nav>
 
 			<div id="header" class="hidden-md hidden-lg">
@@ -35,10 +35,10 @@
 			</div>
 			<div class="menu">
 			  <ul id="hamburger_ul">
-			    <a href="about.html"><li>ABOUT</li></a>
-			    <a href="gallery.html"><li>GALLERY</li></a>
-			    <a href="resume.html"><li>RESUME</li></a>
-			    <a href="mail.html"><li>MAIL ME</li></a>
+			    <li><a href="about.html">ABOUT</a></li>
+			    <li><a href="gallery.html">GALLERY</a></li>
+			    <li><a href="resume.html">RESUME</a></li>
+			    <li><a href="mail.html">MAIL ME</a></li>
 			  </ul>
 			</div> 
 
@@ -54,16 +54,117 @@
 		<div class="container bottomsection">
 			<div class="row">
 				<p class="col-xs-12 col-md-6">Copyright &copy; Ella Meng.</p>
-				<div class="col-xs-12 col-md-3 col-md-offset-3 col-lg-2 col-lg-offset-4">
-					<img src="../static/img/facebook.png">
-					<img src="../static/img/linkedin.png">
-					<img src="../static/img/googleplus.png">
+				<div class="hidden-xs hidden-sm visible-md col-md-3 col-md-offset-3 visible-lg col-lg-2 col-lg-offset-4">
+					<a href="https://www.facebook.com"><img src="../static/img/facebook.png" alt="fb_logo">
+					<a href="https://www.linkedin.com/in/ellameng"><img src="../static/img/linkedin.png" alt="linkedin_logo">
+					<a href="https://plus.google.com"><img src="../static/img/googleplus.png" alt="googleplus_logo">
 				</div>
 			</div>
 		</div>
 	</footer>
 	
 	<script src="../static/JS/script.js"></script>
+	<script>
+		$(window).load(function(){
+			var k1 = document.getElementsByClassName("page_about").length;
+			var k2 = document.getElementsByClassName("page_gallery").length;
+			var k3 = document.getElementsByClassName("page_resume").length;
+			var k4 = document.getElementsByClassName("page_mail").length;
+			if(k1==1)
+			{
+				document.getElementById("nav_about").style.color = "#fefefe";
+			}
+			if(k2==1)
+			{
+				document.getElementById("nav_gallery").style.color = "#fefefe";
+			}
+			if(k3==1)
+			{
+				document.getElementById("nav_resume").style.color = "#fefefe";
+			}
+			if(k4==1)
+			{
+				document.getElementById("nav_mail").style.color = "#fefefe";
+			}
+		});
+	</script>
+	<script>
+		$(window).load(function(){
+			var window_height = window.innerHeight;
+			var content_height = window_height-80-270+20;
+			var content_height_new = content_height + "px";
+			document.getElementsByTagName("section")[0].style.minHeight=content_height_new;
+		});
+	</script>
+
+	<script>
+	$(window).load(function(){
+						var img_height = $("#text1").height();
+						// alert(img_height);
+						var img_num = document.getElementsByClassName("img_div_text");
+						var count = 0;
+						for(;count<9;count++){
+							document.getElementsByClassName("img_div_text")[count].style.marginTop = img_height/2 - 16 + "px";
+						}
+					});
+					</script>
+	<script>
+		function over1(){
+			document.getElementById("text1").style.display = "block";
+		}
+		function out1(){
+			document.getElementById("text1").style.display = "none";
+		}
+		function over2(){
+			document.getElementById("text2").style.display = "block";
+		}
+		function out2(){
+			document.getElementById("text2").style.display = "none";
+		}
+		function over3(){
+			document.getElementById("text3").style.display = "block";
+		}
+		function out3(){
+			document.getElementById("text3").style.display = "none";
+		}
+		function over4(){
+			document.getElementById("text4").style.display = "block";
+		}
+		function out4(){
+			document.getElementById("text4").style.display = "none";
+		}
+		function over5(){
+			document.getElementById("text5").style.display = "block";
+		}
+		function out5(){
+			document.getElementById("text5").style.display = "none";
+		}
+		function over6(){
+			document.getElementById("text6").style.display = "block";
+		}
+		function out6(){
+			document.getElementById("text6").style.display = "none";
+		}
+		function over7(){
+			document.getElementById("text7").style.display = "block";
+		}
+		function out7(){
+			document.getElementById("text7").style.display = "none";
+		}
+		function over8(){
+			document.getElementById("text8").style.display = "block";
+		}
+		function out8(){
+			document.getElementById("text8").style.display = "none";
+		}
+		function over9(){
+			document.getElementById("text9").style.display = "block";
+		}
+		function out9(){
+			document.getElementById("text9").style.display = "none";
+		}
+
+	</script>
 
 </body>
 </html>
