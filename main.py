@@ -50,14 +50,14 @@ class MailHandler(webapp2.RequestHandler):
 
 
 
-    # def post(self):
-    #     sender = self.request.get("email")
-    #     subject = self.request.get("subject")
-    #     body = self.request.get("message")          
-    #     message = mail.EmailMessage(sender=sender, subject=subject)
-    #     message.to = "qiongyu@umich.edu"
-    #     message.body = body
-    #     message.send()
+    def post(self):
+        sender = self.request.get("email")
+        subject = self.request.get("subject")
+        body = self.request.get("message")          
+        message = mail.EmailMessage(sender=sender, subject=subject)
+        message.to = "qiongyu@umich.edu"
+        message.body = body
+        message.send()
 
 
 
