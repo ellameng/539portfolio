@@ -259,10 +259,28 @@ form label {
  	.footer_icon {
  		display: none;
  	}
+ 	#video {
+ 		display: none; 
+ 	}
+ 	.map {
+ 		margin: 0 auto;
+ 	}
+
+ 	#contact_form {
+ 		margin: 0 auto;
+ 		margin-top: 20px;
+
+ 	}
  }
 
 @media print {
 	#video {
+		visibility: hidden;
+	}
+	.map {
+		display: none;
+	}
+	audio {
 		visibility: hidden;
 	}
 }
