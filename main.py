@@ -18,6 +18,8 @@ import webapp2
 import os
 import logging
 import jinja2
+from google.appengine.api import mail
+# from google.appengine.api import users
 
 # Lets set it up so we know where we stored the template files
 JINJA_ENVIRONMENT = jinja2.Environment(
@@ -33,18 +35,30 @@ class AboutHandler(webapp2.RequestHandler):
 class GalleryHandler(webapp2.RequestHandler):
     def get(self):
     	template = JINJA_ENVIRONMENT.get_template('templates/gallery.html')
-    	self.response.write(template.render())
+    	self.response.write(template.render({'title': 'GALLERY'}))
 
 
 class ResumeHandler(webapp2.RequestHandler):
     def get(self):
     	template = JINJA_ENVIRONMENT.get_template('templates/resume.html')
-    	self.response.write(template.render())
+    	self.response.write(template.render({'title': 'RESUME'}))
 
 class MailHandler(webapp2.RequestHandler):
     def get(self):
         template = JINJA_ENVIRONMENT.get_template('templates/mail.html')
-        self.response.write(template.render())    
+        self.response.write(template.render({'title': 'MAIL ME'}))   
+
+
+
+    # def post(self):
+    #     sender = self.request.get("email")
+    #     subject = self.request.get("subject")
+    #     body = self.request.get("message")          
+    #     message = mail.EmailMessage(sender=sender, subject=subject)
+    #     message.to = "qiongyu@umich.edu"
+    #     message.body = body
+    #     message.send()
+
 
 
 app = webapp2.WSGIApplication([
@@ -52,5 +66,16 @@ app = webapp2.WSGIApplication([
     ('/about.html', AboutHandler),
     ('/gallery.html', GalleryHandler),
     ('/resume.html', ResumeHandler), 
-    ('/mail.html', MailHandler),        #put all the header on one header
+    ('/mail.html', MailHandler),  
+    #put all the header on one header
 ], debug=True)
+
+
+
+
+
+
+
+
+
+

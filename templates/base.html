@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta charset="UTF-8">
 	<title>Ella Meng - {{title}}</title>
 	<link href="../static/stylesheet/stylesheet.css" rel="stylesheet">
@@ -54,10 +55,10 @@
 		<div class="container bottomsection">
 			<div class="row">
 				<p class="col-xs-12 col-md-6">Copyright &copy; Ella Meng.</p>
-				<div class="hidden-xs hidden-sm visible-md col-md-3 col-md-offset-3 visible-lg col-lg-2 col-lg-offset-4">
-					<a href="https://www.facebook.com"><img src="../static/img/facebook.png" alt="fb_logo">
-					<a href="https://www.linkedin.com/in/ellameng"><img src="../static/img/linkedin.png" alt="linkedin_logo">
-					<a href="https://plus.google.com"><img src="../static/img/googleplus.png" alt="googleplus_logo">
+				<div class="col-md-3 col-md-offset-3 visible-lg col-lg-2 col-lg-offset-4 footer_icon" >
+					<a href="https://www.facebook.com"></a><img src="../static/img/facebook.png" alt="fb_logo">
+					<a href="https://www.linkedin.com/in/ellameng"></a><img src="../static/img/linkedin.png" alt="linkedin_logo">
+					<a href="https://plus.google.com"></a><img src="../static/img/googleplus.png" alt="googleplus_logo">
 				</div>
 			</div>
 		</div>
@@ -91,7 +92,7 @@
 	<script>
 		$(window).load(function(){
 			var window_height = window.innerHeight;
-			var content_height = window_height-80-270+20;
+			var content_height = window_height-80-270+40;
 			var content_height_new = content_height + "px";
 			document.getElementsByTagName("section")[0].style.minHeight=content_height_new;
 		});
@@ -107,7 +108,7 @@
 							document.getElementsByClassName("img_div_text")[count].style.marginTop = img_height/2 - 16 + "px";
 						}
 					});
-					</script>
+	</script>
 	<script>
 		function over1(){
 			document.getElementById("text1").style.display = "block";
