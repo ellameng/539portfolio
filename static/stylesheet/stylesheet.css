@@ -143,6 +143,16 @@ text-decoration:underline;
 	margin-top:20px;
 }
 
+
+.resumeintro {
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-size: 20px;
+	font-weight: 100;
+	display: block;
+	color: #fefefe;
+	letter-spacing: 1px;
+}
+
 #resume {
 	display: block;
 	height: 1000px;
@@ -234,15 +244,6 @@ text-decoration:underline;
   margin:0 auto;
 }
 
-#myemail {
-	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-	font-size: 20px;
-	font-weight: 100;
-	display: inline-block;
-	color: #fefefe;
-	letter-spacing: 1px;
-	margin-left: 40px;
-}
 
 form label {
 	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
@@ -254,6 +255,36 @@ form label {
 	margin-left: 40px;*/
 }
 
+#email {
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-size: 15px;
+	font-weight: 200;
+	color: #333333;
+}
+
+#subject {
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-size: 15px;
+	font-weight: 200;
+	color: #333333;
+}
+
+#message {
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-size: 15px;
+	font-weight: 200;
+	color: #333333;
+}
+
+#submit_button {
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-size: 15px;
+	font-weight: 200;
+	color: #333333;
+}
+
+
+}
 
  @media(max-width:992px){
  	.footer_icon {
@@ -269,7 +300,6 @@ form label {
  	#contact_form {
  		margin: 0 auto;
  		margin-top: 20px;
-
  	}
  }
 
