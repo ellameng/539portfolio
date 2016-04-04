@@ -18,7 +18,7 @@ import webapp2
 import os
 import logging
 import jinja2
-from google.appengine.api import mail
+from google.appengine.api import mail, app_identity
 # from google.appengine.api import users
 
 # Lets set it up so we know where we stored the template files
@@ -48,18 +48,26 @@ class MailHandler(webapp2.RequestHandler):
         template = JINJA_ENVIRONMENT.get_template('templates/mail.html')
         self.response.write(template.render({'title': 'MAIL ME'}))   
 
-
-
     def post(self):
-        sender = self.request.get("email")
+        app_id = app_identity.get_application_id()
+        sender = "%s <no-reply@%s.appspotmail.com>" % (app_id, app_id)
+
+        to = self.request.get("to")
         subject = self.request.get("subject")
-        body = self.request.get("message")          
-        message = mail.EmailMessage(sender=sender, subject=subject)
-        message.to = "qiongyu@umich.edu"
-        message.body = body
-        message.send()
+        body = self.request.get("message") + "This mail was sent by:" + self.request.get("email")
 
+        try:
+            message = mail.EmailMessage()
+            message.sender = sender
+            message.to = "qiongyu@umich.edu"
+            message.subject = subject
+            message.html = body
+            message.send()
+        except Exception, e:
+            logging.error("Error sending email: %s" % e)
 
+        template = JINJA_ENVIRONMENT.get_template('templates/mail.html')
+        self.response.write(template.render({'success_message': 'Email Sent!!'}))
 
 app = webapp2.WSGIApplication([
     ('/', AboutHandler),
